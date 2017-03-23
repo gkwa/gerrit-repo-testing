@@ -1,0 +1,21 @@
+* Understanding the gerrit repo manifest schema takes a bit of time
+
+I want to use the 'include' element to reduce manifest duplication. This
+seems to work.
+
+https://goo.gl/O3YJyb
+
+fail, repeat, fail, repeat cycle
+#+BEGIN_SRC sh
+function start_over(){
+	cd /tmp &&
+		rm -rf pdev* &&
+		rm -rf pdev &&
+		mkdir pdev &&
+		cd pdev &&
+		~/bin/repo init -m test-includes.xml --quiet \
+			--manifest-url=git@github.com:taylormonacelli/gerrit-repo-testing &&
+		repo sync -j5
+}
+start_over
+#+END_SRC

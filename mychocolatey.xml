@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest>
+  <remote fetch="https://github.com" name="gh1" alias="origin" />
+  <remote fetch="ssh://git@github.com" name="gh2" alias="origin" />
+  <default revision="master" />
+  <project clone-depth="10" name="taylormonacelli/dotfiles" remote="gh1" path="dotfiles" />
+  <project clone-depth="10" name="taylormonacelli/mychocolatey" remote="gh1" path="dotfiles/mychocolatey" />
+</manifest>
